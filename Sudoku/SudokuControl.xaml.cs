@@ -33,14 +33,17 @@ namespace IAmyMyOwnOrg.Sudoku
         #endregion
 
         //NOTE: Everytime I try to modify this the app hangs!
+        
         public SudokuControl()
-        {
+        {            
             InitializeComponent();
             Main = this; 
             _rect = slot0;//PuzzleGrid.Children.ElementAt(0) as Rectangle;
             this.NewPuzzleBtn_Click(null, null);
         }
 
+        [PreEmptive.Attributes.Setup(CustomEndpoint = "so-s.info/PreEmptive.Web.Services.Messaging/MessagingServiceV2.asmx")]
+        [PreEmptive.Attributes.Teardown()]
         private void InitializeColors() {
             m_Colors = new SolidColorBrush[GRID_SIZE+1];
 
@@ -284,6 +287,7 @@ namespace IAmyMyOwnOrg.Sudoku
         
 
         #region events
+        [PreEmptive.Attributes.Feature("NewPuzzle")]
         private void NewPuzzleBtn_Click(object sender, RoutedEventArgs e) {
             // Init the colors if not already done so
             if (m_Colors == null) {

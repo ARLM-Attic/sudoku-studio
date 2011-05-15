@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Sudoku")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Play Sudoku from within Visual Studio!!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("I Amy My Own Org")]
 [assembly: AssemblyProduct("Sudoku")]
@@ -32,5 +32,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
+// Runtime Intelligence Tracking
+[assembly: PreEmptive.Attributes.Business("3E35F098-CE43-4F82-9E9D-05C8B1046A45")]
+[assembly: PreEmptive.Attributes.Application("27A3E96A-BDFC-4188-A19C-E28349A0CFAD")]
 
 
+[assembly: GuidAttribute("27A3E96A-BDFC-4188-A19C-E28349A0CFAD")]
